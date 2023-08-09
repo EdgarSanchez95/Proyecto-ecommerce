@@ -18,4 +18,10 @@ public class ProductoController {
     
         return "productos/show";
     }
+    
+    @GetMapping("/create")
+    public String create(){
+    
+        return "productos/create";
+    }
 }
