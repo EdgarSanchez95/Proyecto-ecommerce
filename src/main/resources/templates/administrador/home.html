@@ -12,26 +12,24 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link thhref="@{/css/heroic-features.css}" rel="stylesheet">
+  <link th:href="@{css/heroic-features.css}" rel="stylesheet">
 
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <div th:include="administrador/template_admin.html::header">
-      
-  </div>
+  <div th:include="administrador/template_admin.html::header"></div>
 
     <!-- Page Content -->
     <div class="container">
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
-        <h1 class="display-3">Bienvenido a Spring Ecommerce 2023</h1>
+        <h1 class="display-3">Bienvenido a Spring Ecommerce 2021</h1>
         <p class="lead">Tu tienda de productos en Línea</p>
       </header>
 
@@ -92,10 +90,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <div th:include="administrador/template_admin.html::footer">
-      
-  </div>
-
+     <div th:include="administrador/template_admin.html::footer"></div>
 
     <!-- Bootstrap core JavaScript -->
     <script th:src="@{vendor/jquery/jquery.min.js}"></script>
