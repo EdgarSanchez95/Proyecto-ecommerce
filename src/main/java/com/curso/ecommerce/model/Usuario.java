@@ -39,6 +39,7 @@ public class Usuario {
     private List<Orden> ordenes;
 
     public Usuario(int id, String nombre, String username, String email, String direccion, String telefono, String tipo, String password) {
+        
         this.id = id;
         this.nombre = nombre;
         this.username = username;
@@ -47,10 +48,11 @@ public class Usuario {
         this.telefono = telefono;
         this.tipo = tipo;
         this.password = password;
-        this.productos = productos;
-        this.ordenes = ordenes;
+        
     }
 
+   
+    
         
    
 }

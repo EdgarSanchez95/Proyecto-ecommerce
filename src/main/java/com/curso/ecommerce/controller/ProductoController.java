@@ -1,6 +1,9 @@
 
 package com.curso.ecommerce.controller;
 
+
+
+
 import com.curso.ecommerce.model.Producto;
 import com.curso.ecommerce.model.Usuario;
 import com.curso.ecommerce.service.ProductoService;
@@ -27,7 +30,7 @@ public class ProductoController {
     
     @GetMapping("")
     public String show(){
-    
+        
         return "productos/show";
     }
     
@@ -41,11 +44,9 @@ public class ProductoController {
     public String save(Producto producto){
     
         LOGGER.info("Este es el objeto producto {}", producto);
-        
         Usuario u = new Usuario(1,"","","","","","","");
         producto.setUsuario(u);
         productoService.save(producto);
-       
         return "redirect:/productos";
     }
 }
