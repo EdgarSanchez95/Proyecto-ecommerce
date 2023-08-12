@@ -4,6 +4,7 @@ package com.curso.ecommerce.service;
 import org.springframework.stereotype.Service;
 import com.curso.ecommerce.model.Producto;
 import com.curso.ecommerce.repository.ProductoRepository;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -36,5 +37,11 @@ public class ProductoServiceImple implements ProductoService{
        productoRepository.deleteById(id);
     }
 
-   
+    @Override
+    public List<Producto> findAll() {
+        return productoRepository.findAll();
+    }
+
+    
+    
 }

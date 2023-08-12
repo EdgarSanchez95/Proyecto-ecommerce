@@ -32,8 +32,4 @@ public class Producto {
     private  Usuario usuario;
 
     
-
-   
-    
-    
 }
