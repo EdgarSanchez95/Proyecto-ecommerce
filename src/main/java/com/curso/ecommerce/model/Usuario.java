@@ -9,6 +9,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.util.List;
 import lombok.Data;
+import lombok.ToString;
+
 
 /**
  *
@@ -32,12 +34,15 @@ public class Usuario {
     private String tipo;
     private String password;
     
+    @ToString.Exclude
     @OneToMany(mappedBy = "usuario")
     private List<Producto> productos;
     
+    @ToString.Exclude
     @OneToMany(mappedBy = "usuario")
     private List<Orden> ordenes;
-    
+
+       
     
     public Usuario(){
     
@@ -57,6 +62,8 @@ public class Usuario {
         this.productos = productos;
         this.ordenes = ordenes;
     }
+
+    
 
    
     

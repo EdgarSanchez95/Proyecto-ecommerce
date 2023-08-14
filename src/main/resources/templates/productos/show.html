@@ -22,7 +22,7 @@
 <body>
 
   <!-- Navigation -->
-  <div th:include="administrador/template_admin.html::header"></div>
+  <div th:insert="~{administrador/template_admin.html::header}"></div>
 
 <!-- Page Content -->
 <div class="container">
@@ -57,7 +57,7 @@
         <td th:text="${producto.descripcion}"></td>
         <td th:text="${producto.cantidad}"></td>
         <td th:text="${producto.precio}"></td>
-        <td><a  class="btn btn-warning" href="">Editar</a> </td>
+        <td><a  class="btn btn-warning" th:href="@{/productos/edit/{id} (id=${producto.id})}">Editar</a> </td>
         <td><a  class="btn btn-danger" href="">Eliminar</a> </td>
       </tr>       
     </tbody>
@@ -67,7 +67,7 @@
 <!-- /.container -->
 
 <!-- Footer -->
-<div th:include="administrador/template_admin.html::footer">
+<div th:insert="~{administrador/template_admin.html::footer}">
       
   </div>
 
