@@ -22,39 +22,16 @@
     <body>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Spring eCommerce</a>
-
-                <form class="form-inline my-2 my-lg-0" method="post"
-                      action="#">
-                    <input class="form-control mr-sm-2" type="search"
-                           placeholder="Buscar" aria-label="Search" name="nombre"
-                           autocomplete="off">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link"
-                                                href="carrito.html">Carrito</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                                href="login.html">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div th:include="usuario/template_usuario.html::header">
+            
+        </div>
 
         <!-- Page Content -->
         <div class="container">
 
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
-                <h1 class="display-3">Bienvenido a Spring Ecommerce 2021</h1>
+                <h1 class="display-3">Bienvenido a Spring Ecommerce 2023</h1>
                 <p class="lead">Tu tienda de productos en Línea</p>
             </header>
 
@@ -68,7 +45,7 @@
                             <p class="card-text" th:text="${producto.nombre}"></p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-success">Ver producto</a>
+                            <a th:href="@{/productohome/{id} (id=${producto.id})}" class="btn btn-success">Ver producto</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +56,7 @@
         <!-- /.container -->
 
         <!-- Footer -->
-        <div th:insert="~{administrador/template_admin.html::footer}"></div>
+        <div th:insert="~{usuario/template_usuario.html::footer}"></div>
 
         <!-- Bootstrap core JavaScript -->
         <script th:src="@{vendor/jquery/jquery.min.js}"></script>
